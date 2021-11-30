@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<title>Galleria </title>
+	<link rel="stylesheet" href="style.css">
+	<script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.3.3/gsap.min.js"></script>
+	<script src="https://unpkg.com/imagesloaded@4/imagesloaded.pkgd.min.js"></script>
+</head>
+
+<body>
+	<div id="notte" class="modal">
+		<div class="modal-content">
+			<br>
+            <button class="close">X</button>
+            <h1 style="text-align:center" class="titolo_modal">La notte stellata</h1>
+            <img src="notte.jpg" class="img">
+            <br>
+            <div class="tabella">
+              <h5 class="t">Autore:</h5> 
+                <p class="p">Vicent Van Gogh</p>
+              <h5 class="t">Tecnica:</h5>
+                <p class="p">Tempera e pastello su cartone</p>
+              <h5 class="t">Dimensioni:</h5> 
+                <p class="p"> 91cm×73,5 cm</p>
+              <h5 class="t">Ubicazione:</h5>
+                <p class="p">Galleria nazionale, Oslo</p>
+              <h5 class="t">Descrizione:</h5>
+                <p class="p">La Notte stellata è un dipinto del pittore olandese Vincent van Gogh, realizzato nel 1889 e conservato al Museum of Modern Art di New York. Vera e propria icona della pittura occidentale, il dipinto raffigura un paesaggio notturno di Saint-Rémy-de-Provence, poco   prima del sorgere del sole.
+                </p>
+            </div>
+            <model-viewer ar loading="eager" reveal="manual" src="./Notte/scene.gltf" ar-placement="wall" ar-modes="scene-viewer quick-look" style="float:center">
+              <button slot="ar-button" class="bottone-ar">
+                Premi questo tasto per vedere il quadro in AR
+              </button>
+              <div style="display: none" slot="poster" ></div>
+            </model-viewer>
+        </div>
+  </div>
+  <div id="ulivi" class="modal">
+        <div class="modal-content">
+            <br>
+            <button class="close">X</button>
+            <h1 class="titolo_modal">Alberi d'ulivo</h1>
+            <img src="ulivi.jpg" class="img">
+            <div class="tabella">
+              <h5 class="t">Autore:</h5> 
+                <p class="p">Vicent Van Gogh</p>
+              <h5 class="t">Tecnica:</h5>
+                <p class="p">Olio su tela</p>
+              <h5 class="t">Dimensioni:</h5> 
+                <p class="p"> 92 cm × 72.5 cm </p>
+              <h5 class="t">Ubicazione:</h5>
+                <p class="p">Museum of art di New York</p>
+              <h5 class="t">Descrizione:</h5>
+                <p class="p">Vincent van Gogh dipinse almeno 15 dipinti di ulivi, per lo più a Saint-Rémy-de-Provence nel 1889. Su sua richiesta, visse in un asilo lì dal maggio 1889 al maggio 1890 dipingendo i giardini del manicomio e, quando aveva il permesso di avventurarsi fuori dalle sue mura, vicino a ulivi, cipressi e campi di grano.
+                </p>
+            </div>
+
+            <model-viewer loading="eager" reveal="manual" ar-placement="wall" ar  ar-modes="scene-viewer quick-look" src="./Alberi/scene.gltf" class="c">
+              <button slot="ar-button" class="bottone-ar">
+                Premi questo tasto per vedere il quadro in AR
+              </button>
+              <div style="display: none" slot="poster"></div>
+            </model-viewer>
+        </div>
+  </div>
+  <div id="urlo" class="modal">
+        <div class="modal-content">
+            <br>
+            <button class="close">X</button>
+            <h1 class="titolo_modal">L'urlo</h1>
+            <img src="urlo.jpg" class="img">
+            
+            <div class="tabella">
+              <h5 class="t">Autore:</h5> 
+                <p class="p">Edvard Munch</p>
+              <h5 class="t">Tecnica:</h5>
+                <p class="p">Tempera e pastello su cartone</p>
+              <h5 class="t">Dimensioni:</h5> 
+                <p class="p"> 91cm×73,5 cm </p>
+              <h5 class="t">Ubicazione:</h5>
+                <p class="p">Galleria nazionale, Oslo</p>
+              <h5 class="t">Descrizione:</h5>
+                <p class="p">L'urlo è il nome assegnato a una serie di famosi dipinti del pittore norvegese Edvard Munch. Un quadro molto simile è L'ansia, sempre di Munch
+                </p>
+            </div>
+
+            <model-viewer loading="eager" reveal="manual" ar-placement="wall" ar  ar-modes="scene-viewer quick-look" src="./urlo/scene.gltf" class="c">
+              <button slot="ar-button" class="bottone-ar">
+                Premi questo tasto per vedere il quadro in AR
+              </button>
+              <div style="display: none" slot="poster"></div>
+            </model-viewer>
+            <br>
+        </div>
+  </div>
+    <div id="blur" class="blur">
+      <div class="app">
+        <div class="titolo">
+          <h1>VIRTUAL GALLERY</h1>
+        </div>
+          <div class="cardList">
+              <button class="cardList__btn btn btn--left">
+                  <div class="icon">
+                      <svg>
+                          <use xlink:href="#arrow-left"></use>
+                      </svg>
+                  </div>
+              </button>
+
+              <div class="cards__wrapper">
+                  <button class="card current--card" id="nottediv">
+                      <div class="card__image">
+                          <img src="notte.jpg" alt="" />
+                      </div>
+                  </button>
+
+                  <button class="card next--card" id="ulividiv">
+                      <div class="card__image">
+                          <img src="ulivi.jpg" alt="" />
+                      </div>
+                  </button>
+
+                  <button class="card previous--card" id="urlodiv">
+                      <div class="card__image">
+                          <img src="urlo.jpg" alt="" />
+                      </div>
+                  </button>
+              </div>
+
+              <button class="cardList__btn btn btn--right">
+                  <div class="icon">
+                      <svg>
+                          <use xlink:href="#arrow-right"></use>
+                      </svg>
+                  </div>
+              </button>
+          </div>
+
+          <div class="infoList">
+              <div class="info__wrapper">
+                  <div class="info current--info">
+                      <h1 class="text name">Notte stellata</h1>
+                      <h4 class="text location">Vincent Van Gogh</h4>
+                      <p class="text description">Museum of art di New York</p>
+                  </div>
+
+                  <div class="info next--info">
+                    <h1 class="text name">Alberi d'ulivo</h1>
+                    <h4 class="text location">Vincent Van Gogh</h4>
+                    <p class="text description">Museum of art di New York</p>
+                </div>
+
+                <div class="info previous--info">
+                  <h1 class="text name">Urlo</h1>
+                  <h4 class="text location">Edvard Munch</h4>
+                  <p class="text description">Galleria Nazionale Oslo</p>
+              </div>
+          </div>
+      </div>
+
+
+      <div class="app__bg">
+          <div class="app__bg__image current--image">
+              <img src="notte.jpg" alt="" />
+          </div>
+          <div class="app__bg__image next--image">
+              <img src="ulivi.jpg" alt="" />
+          </div>
+          <div class="app__bg__image previous--image">
+              <img src="urlo.jpg" alt="" />
+          </div>
+      </div>
+  </div>
+</div>
+
+<div class="loading__wrapper">
+    <div class="loader--text">Loading...</div>
+    <div class="loader">
+        <span></span>
+    </div>
+</div>
+
+<svg class="icons" style="display: none;">
+    <symbol id="arrow-left" xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512'>
+        <polyline points='328 112 184 256 328 400'
+                  style='fill:none;
+                  stroke:#fff;
+                  stroke-linecap:round;
+                  stroke-linejoin:round;
+                  stroke-width:48px' />
+    </symbol>
+    <symbol id="arrow-right" xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512'>
+        <polyline points='184 112 328 256 184 400'
+                  style='fill:none;stroke:#fff;stroke-linecap:round;stroke-linejoin:round;stroke-width:48px' />
+    </symbol>
+</svg>
+<div class="support">
+    <a href="https://twitter.com/DevLoop01" target="_blank"><i class="fab fa-twitter-square"></i></a>
+    <a href="https://dribbble.com/devloop01" target="_blank"><i class="fab fa-dribble"></i></a>
+</div>
+</body>
+	<script src="script.js">
+	</script>
+</html>
